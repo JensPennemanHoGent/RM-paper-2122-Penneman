@@ -43,21 +43,23 @@ Bij grote ondernemingen zoals: Google, Amazon, Netflix en anderen, is de beschik
 Maar wanneer dit moet schalen naar een webapplicatie die wereldwijd toegankelijk is, zal deze heel wat complexe keuzes met zich meebrengen.
 Uit onderzoek blijkt dat 40\% van de online gebruikers een website verlaat als de pagina langer dan 3 seconden tijd in beslag neemt om op het scherm te verschijnen \autocite{LoadingSpeedWedevs2021}.
 Om een performante website te ontwikkelen zijn er verscheidene JavaScript-frameworks verschenen. Het uitbreiden van deze lijst stopt zeker niet vandaag wegens de steeds stijgende interesse erin.
-Aangezien ReactJS momenteel de populairste is \autocite{Gathoni2022}, zullen we ons onderzoek baseren op dit framework. 
+Aangezien ReactJS momenteel de populairste is \autocite{Gathoni2022}, wordt dit onderzoek gebasseerd op dit framework.
+Dat wil niet zeggen dat andere frameworks, zoals VueJS of Svelte, geen betere optie zijn.
+Dit is eerder een persoonlijke voorkeur en kan tijdens het onderzoek zelf nog wijzigen.
 
 \subsection{Onderzoeks- en deelvragen}
-In dit onderzoek gaan we na of het gebruik van een SPA genoeg voordeel met zich meebrengt.
+Dit onderzoek gaat na of het gebruik van een SPA genoeg voordeel met zich meebrengt.
 Wanneer is dit de beste keuze?
-Alsook bespreken we de voor- en nadelen van zowel de single page applicatie, alsook de multi page applicatie.
-Tijdens het onderzoek nemen we verscheidene aspecten in acht:
+Alsook worden de voor- en nadelen besproken van zowel de single page applicatie, alsook de multi page applicatie.
+Tijdens het onderzoek worden verscheidene aspecten in acht genomen:
 laadtijden,
 gebruikerservaring,
 verschil tussen zoekmachines en mensen\dots
 Ook andere vragen zoals:
 "Laad de site snel genoeg voor de gemiddelde gebruiker?",
-"Welke verschillen in infrastructuur merken we op",
+"Welke verschillen in infrastructuur merken we op?",
 "Kan ik als ontwikkelaar makkelijk overschakelen van MPA's naar SPA's en omgekeerd?".
-Bij de ontwikkelervaring willen we de nadruk leggen op de duur van het ontwikkelen van dezelfde applicatie.
+Bij de ontwikkelervaring ligt de nadruk op de duur van het ontwikkelen van dezelfde applicatie.
 
 \subsection{Doelstelling}
 De onderzoeksdoelstelling is te kunnen antwoorden op deze vragen door middel van een voorbeeldapplicatie.
@@ -68,12 +70,13 @@ Met de ontvangen resultaten uit de testen en enquêtes maken wij een conclusie.
 
 
 \section{Overzicht literatuur}
-Waar we naar op zoek zijn is de manier waarop we de webapplicatie kunnen testen en wat voor applicaties hiervoor geschikt zijn.
+Wat belangerijk is, is de manier waarop de webapplicatie getest kan worden.
+Alsook wat voor applicaties hiervoor geschikt zijn.
 Wat zijn de minimum functionaliteiten ervan?
 Hoe groot moet de applicatie zijn?
 In welke browsers moet deze werken?
-Op welke gebruikers richten we ons tijdens dit onderzoek?
-Aan de hand van deze vragen kunnen we een passend project bepalen.
+Op welke gebruikers richt dit onderzoek zich?
+Aan de hand van deze vragen kan een passend project bepaald worden.
 Deze applicatie moet dan een haalbaar doel zijn in beide vormen, een single page- en multi page applicatie.
 
 \subsection{Single page applicaties}
@@ -94,7 +97,7 @@ Ondanks dat er naar een andere link verwezen wordt, wordt niet heel de pagina ve
 Concreet wil dit zeggen dat de gebruiker geen leeg scherm te zien krijgt tijdens het inladen van een nieuwe pagina.
 
 \subsection{Multi page applicaties}
-Aan de andere zijde van dit onderzoek houden we ons bezig met de multi page applicaties.
+Aan de andere zijde van dit onderzoek zijn de multi page applicaties.
 Deze vorm wordt tegenwoordig ook de traditionele manier van website-ontwikkeling genoemd.
 Dit omdat de structuur in de afgelopen jaren weinig veranderd is.
 
@@ -109,14 +112,14 @@ Dit wil op zijn beurt zeggen dat deze bij zoekmachines hogerop komt te staan en 
 
 
 \section{Methodologie}
-Voor de wijze van beproeving delen we het onderzoek op in 4 onderdelen: het voorbereiden, het ontwikkelen, het testen op objectieve en subjectieve gegevens en het besluiten.
-Bij ieder deel hebben we ook een geschatte tijd.
+Voor de wijze van beproeving is dit onderzoek opgedeelt in 4 onderdelen: het voorbereiden, het ontwikkelen, het testen op objectieve en subjectieve gegevens en het besluiten.
+Ieder deel heeft ook een geschatte tijd.
 
 \subsection{Voorbereiding}
-Voordat het ontwikkelen van start kan gaan moeten we zeker zijn over de vereisten ervan.
+Voordat het ontwikkelen van start kan gaan moeten de vereisten ervan duidelijk zijn.
 Uiteraard moeten de functionaliteiten van de webapplicatie in beide vormen gelijk zijn.
-Omdat we zo veel mogelijk invloed willen krijgen van wijzigende data hebben we gekozen voor een blog-website.
-Hiervan vermoeden we dat de performantie het sterkst zal verschillen, omdat het gebruik van afbeeldingen een grote invloed heeft.
+Omdat dit onderzoek zo veel mogelijk invloed wil krijgen van wijzigende data is er gekozen voor een blog-website.
+Hiervan is het vermoeden dat de performantie het sterkst zal verschillen, omdat het gebruik van afbeeldingen een grote invloed heeft.
 De minimum vereisten van de webapplicatie zijn:
 kunnen inloggen,
 kunnen registreren,
@@ -129,7 +132,7 @@ Het onderscheid tussen beide applicaties bevindt zich voornamelijk in de front-e
 Hier zal bij de gebruiker ook het grootste verschil duidelijk worden.
 Dit voornamelijk bij de performantie en ervaring ervan.
 
-Ter voorbereiding willen we ook Mock-ups maken van de applicatie.
+Ter voorbereiding worden er ook mock-ups gemaakt van de applicatie.
 Dit om de stijl van de applicatie zo gelijk mogelijk te houden tussen de 2 projecten.
 Dit zou het ontwikkelingsproces moeten versnellen en zo logische ontwerpfouten sneller doen verwijderen.
 
@@ -154,37 +157,37 @@ De geschatte duur van de ontwikkeling is 3 weken.
 
 \subsection{Testen}
 Na het ontwikkelen worden de applicaties met elkaar vergeleken.
-Dit delen we op in 2 categorieën:
+Dit is opgedeelt in 2 categorieën:
 de objectieve gegevens (performantie, SEO, bruikbaarheid...) en de subjectieve gegevens (mening van gebruikers).
 
 \subsubsection{Objectief}
-In dit onderdeel gaan we meetbare voor- en nadelen uit beide applicaties testen.
-Voor de performantie van de SPA webapplicatie gebruiken we React Developer Tools \autocite{RDT2022}.
+In dit onderdeel worden meetbare voor- en nadelen uit beide applicaties getest.
+Voor de performantie van de SPA webapplicatie wordt React Developer Tools gebruikt \autocite{RDT2022}.
 Deze tool is hier speciaal voor ontwikkeld en zou een eerste basis moeten zijn voor onze latere conclusie.
 Google's Lighthouse kan gebruikt worden voor beide de SPA en MPA.
 Deze wordt gebruikt voor het testen van prestaties, toegankelijkheid, progressieve webapplicaties, SEO en meer \autocite{GoogleLighthouse2022}.
 Dit geeft een direct beeld van laadtijden andere ontbrekende vereisten.
 Bijvoorbeeld deze voor blinde- en slechtziende mensen.
-Voor het individueel meten van verzoeken naar de server kunnen we gebruikmaken van de Chrome DevTools \autocite{GoogleDevTools2016}.
+Voor het individueel meten van verzoeken naar de server kan van de Chrome DevTools gebruik gemaakt worden \autocite{GoogleDevTools2016}.
 Deze omvatten een hele resem aan tools die het ontwikkelen vergemakkelijken.
 In dit onderzoek kan het gebruikt worden om na te gaan welke bestanden en verzoeken ervoor zorgen dat de website trager laad.
 Ook waar de verzoeken langer duren om te verwerken.
-Nadien kunnen we hieruit afleiden of het probleem zich bevindt aan de gebruikers' zijde of aan de achterliggende technologie, zoals het soort verbinding of de locatie van de het verzoek.
+Nadien kan hieruit afgeleidt worden of het probleem zich bevindt aan de gebruikers' zijde of aan de achterliggende technologie, zoals het soort verbinding of de locatie van de het verzoek.
 Een extra waarde die een rol speelt in performantie-testen is het uur waarop deze uitgevoerd worden.
 Er zullen immers minder gebruikers actief zijn wanneer het 14:00 is, tegenover wanneer het 02:00 is.
-Voor het langdurig testen maken we gebruik van dotcom-monitor \autocite{dotcom-monitor2022}.
+Voor het langdurig testen wordt er gebruik gemaakt van dotcom-monitor \autocite{dotcom-monitor2022}.
 Het is een tool dat zich 24/7 bezig houdt met het testen van uw site's beschikbaarheid en snelheid.
 Deze tool zou ons een een volledig beeld van de performantie moeten geven.
 
 \subsubsection{Subjectief}
 In dit onderdeel is er geen concrete vorm van tools ter beschikking.
-Ook kunnen we hier alleen afgaan op de gebruiker's mening.
-Om toch dit onderdeel te kunnen bevragen voegen we aan het objectieve deel een enquête toe.
+Ook kan hier alleen afgegaan worden op de gebruiker's mening.
+Om toch dit onderdeel te kunnen bevragen is een enquête aan het objectieve deel toegevoegd.
 Deze omvat enkele vragen die voor-, tijdens- en na het gebruik ingevuld kunnen worden.
-Om het proces zo vlot mogelijk te laten verlopen geven we de gebruiker een reeks opdrachten die uit te voeren zijn op de applicaties.
+Om het proces zo vlot mogelijk te laten verlopen krijgt de gebruiker een reeks opdrachten die uit te voeren zijn op de applicaties.
 Ook krijgen ze bij iedere opdracht de bijhorende vragen.
 Zo is het mogelijk te werken op eigen tempo en ligt er geen druk op de "proefkonijnen".
-We stellen voornamelijk vragen over de mening over beide applicaties, alsook de persoonlijke gegevens voor zij die dit willen delen met ons onderzoek.
+Er worden voornamelijk vragen gestelt over de mening over beide applicaties, alsook de persoonlijke gegevens voor zij die dit willen delen met ons onderzoek.
 Enkele voorbeeldvragen zijn:
 "Bij welke vorm ligt uw voorkeur?",
 "Welke verschillen merkte u op?",
@@ -195,7 +198,7 @@ Enkele voorbeeldcategorieën zijn: de leeftijd en het geslacht.
 De geschatte duur van het testen is 4 weken.
 
 \subsection{Besluiten}
-In dit en direct het laatste onderdeel zullen we de gemeten waarden en verzamelde gegevens samenbrengen tot een besluit.
+In dit en direct het laatste onderdeel zullen de gemeten waarden en verzamelde gegevens samengebracht worden tot een besluit.
 De bedoeling van dit besluit is niet te concluderen welke van de 2 nooit gebruikt zou mogen worden.
 Het is de bedoeling de keuze makkelijker te maken en daarbij uit te leggen waarom die keuze beter zou zijn.
 
