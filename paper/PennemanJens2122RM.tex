@@ -1,129 +1,242 @@
-%==============================================================================
-% Sjabloon onderzoeksvoorstel bachelorproef
-%==============================================================================%
-% Compileren in TeXstudio:
-%
-% - Zorg dat Biber de bibliografie compileert (en niet Biblatex)
-%   Options > Configure > Build > Default Bibliography Tool: "txs:///biber"
-% - F5 om te compileren en het resultaat te bekijken.
-% - Als de bibliografie niet zichtbaar is, probeer dan F5 - F8 - F5
-%   Met F8 compileer je de bibliografie apart.
-%
-% Als je JabRef gebruikt voor het bijhouden van de bibliografie, zorg dan
-% dat je in ``biblatex''-modus opslaat: File > Switch to BibLaTeX mode.
-
 \documentclass{hogent-article}
 
-\usepackage{lipsum} % Voor vultekst
-
-%------------------------------------------------------------------------------
-% Metadata over het artikel
-%------------------------------------------------------------------------------
-
-%---------- Titel & auteur ----------------------------------------------------
-
-% TODO: (fase 2) geef werktitel van je eigen voorstel op
-\PaperTitle{Titel van het artikel}
-% Dit is typisch de opdracht en het vak waarvoor dit artikel geschreven is, bv.
-% ``Verslag onderzoeksproject Onderzoekstechnieken 2018-2019''
+%Title
+\PaperTitle{Wat is het verschil in prestatie tussen single page applicaties (SPA) en multi page applicaties (MPA)?}
 \PaperType{Paper Research Methods: onderzoeksvoorstel}
 
-% TODO: (fase 1) vul je eigen naam in als auteur, geef ook je emailadres mee!
-\Authors{Steven Stevens\textsuperscript{1}, Jan Janssens\textsuperscript{2}} % Authors
+%Auteur
+\Authors{Jens Penneman\textsuperscript{1}}
 
-% Als het hier effectief gaat om een voorstel voor de bachelorproef, dan ben je
-% hier verplicht de naam van je co-promotor in te vullen. Zoniet, dan kan je het
-% leeg laten.
 \CoPromotor{}
 
-% Contactinfo: Geef hier de contactgegevens van elke auteur van het artikel (en
-% indien van toepassing ook van de co-promotor).
 \affiliation{
-  \textsuperscript{1} \href{mailto:steven.stevens.u1234@student.hogent.be}{steven.stevens.u1234@student.hogent.be}}
-\affiliation{
-  \textsuperscript{2} \href{mailto:jan.janssens.u4321@student.hogent.be}{mailto:jan.janssens.u4321@student.hogent.be}
+  \textsuperscript{1} \href{mailto:jens.penneman@student.hogent.be}{jens.penneman@student.hogent.be}}
+
+%Samenvatting
+\Abstract{
+Een goed presterende webapplicatie brengt heel wat moeilijke keuzes met zich mee.
+In dit onderzoek wordt besproken wat de voor- en nadelen zijn bij het gebruik van, zowel een single page applicatie, alsook de "traditionele" multi page applicatie.
+De focus ligt niet enkel op de statistieken.
+Naast performantie en gebruiksvriendelijkheid wordt ook de gebruikerservaring en ontwikkeling ervan onder de loep genomen.
+De voorkeur ligt in de conclusie naar het gebruik van single page applicaties.
+Dit waar de performantie en ontwikkelingsduur een rol speelt.
+Echter zal de initiële laadtijd en SEO-prestatie beter zijn bij multi page applicaties.
 }
 
-%---------- Abstract ----------------------------------------------------------
+%Sleutelwoorden
+\Keywords{Webapplicatieontwikkeling; SPA; MPA; ReactJS; HTML; JavaScript}
+\newcommand{\keywordname}{Sleutelwoorden}
 
-\Abstract{% TODO: (fase 6)
-Hier schrijf je de samenvatting van je artikel, als een doorlopende tekst van één paragraaf.
-
-Bij de sleutelwoorden geef je het onderzoeksdomein (= specialisatierichting in de opleiding), samen met andere sleutelwoorden die je werk beschrijven.
-}
-
-%---------- Onderzoeksdomein en sleutelwoorden --------------------------------
-% TODO: (fase 2) Vul de sleutelwoorden aan.
-
-% Het eerste sleutelwoord beschrijft het onderzoeksdomein. Je kan kiezen uit
-% deze lijst:
-%
-% - Mobiele applicatieontwikkeling
-% - Webapplicatieontwikkeling
-% - Applicatieontwikkeling (andere)
-% - Systeembeheer
-% - Netwerkbeheer
-% - Mainframe
-% - E-business
-% - Databanken en big data
-% - Machineleertechnieken en kunstmatige intelligentie
-% - Andere (specifieer)
-%
-% De andere sleutelwoorden zijn vrij te kiezen.
-
-\Keywords{Onderzoeksdomein; Sleutelwoord1; Sleutelwoord2; Sleutelwoord3}
-\newcommand{\keywordname}{Sleutelwoorden} % Defines the keywords heading name
-
-%---------- Titel, inhoud -----------------------------------------------------
 
 \begin{document}
 
-\flushbottom % Makes all text pages the same height
-\maketitle % Print the title and abstract box
-\tableofcontents % Print the contents section
-\thispagestyle{empty} % Removes page numbering from the first page
+\flushbottom
+\maketitle
+\tableofcontents
+\thispagestyle{empty}
 
-%------------------------------------------------------------------------------
-% Hoofdtekst
-%------------------------------------------------------------------------------
 
 \section{Inleiding}
+Welke technologie er achterliggend gebruikt word voor het ontwikkelen van een website speelt voor de meeste gebruikers geen rol.
+Echter kan men niet verbergen dat de grootste pijnpunten van een website de laadtijden en performantie zijn.
+Bij grote ondernemingen zoals: Google, Amazon, Netflix en anderen, is de beschikbaarheid simpel te verkrijgen voor 10 gebruikers per dag.
+Maar wanneer dit moet schalen naar een webapplicatie die wereldwijd toegankelijk is, zal deze heel wat complexe keuzes met zich meebrengen.
+Uit onderzoek blijkt dat 40\% van de online gebruikers een website verlaat als de pagina langer dan 3 seconden tijd neemt om op het scherm te verschijnen \autocite{LoadingSpeedWedevs2021}.
+Om een performante website te ontwikkelen zijn er verscheidene JavaScript-frameworks verschenen. Het uitbreiden van deze lijst stopt zeker niet vandaag wegens de steeds stijgende interesse erin.
+Aangezien ReactJS momenteel de populairste is \autocite{Gathoni2022}, zullen we ons onderzoek baseren op dit framework. 
 
-% TODO: (fase 2) introduceer je gekozen onderwerp, formuleer de onderzoeksvraag en deelvragen. Wat is de doelstelling (is die S.M.A.R.T.?), wat zal het resultaat zijn van het onderzoek (een Proof-of-Concept, een prototype, een advies, ...)? Waarom is het nuttig om dit onderwerp te onderzoeken?
+\subsection{Onderzoeks- en deelvragen}
+In dit onderzoek gaan we na of het gebruik van een SPA genoeg voordeel met zich meebrengt.
+Wanneer is dit de beste keuze?
+Alsook bespreken we de voor- en nadelen van zowel de single page applicatie, alsook de multi page applicatie.
+Tijdens het onderzoek nemen we verscheidene aspecten in acht:
+laadtijden,
+gebruikerservaring,
+verschil tussen zoekmachines en mensen\dots
+Ook andere vragen zoals:
+"Laad de site snel genoeg voor de gemiddelde gebruiker?",
+"Welke verschillen in infrastructuur merken we op",
+"Kan ik als ontwikkelaar makkelijk overschakelen van MPA's naar SPA's en omgekeerd?".
+Bij de ontwikkelervaring willen we de nadruk leggen op de duur van het ontwikkelen van dezelfde applicatie.
 
-\lipsum[1-3]
+\subsection{Doelstelling}
+De onderzoeksdoelstelling is te kunnen antwoorden op deze vragen door middel van een voorbeeldapplicatie.
+Deze wordt in beide vormen ontwikkeld en beproefd door verschillende tools en mensen.
+Lighthouse en Chrome DevTools kunnen gebruikt worden voor de algemene performantie ervan te testen \autocite{Demian2022}.
+Meer hierover in de methodologie.
+Met de ontvangen resultaten uit de testen en enquêtes maken wij een conclusie.
+
 
 \section{Overzicht literatuur}
+Waar we naar op zoek zijn is de manier waarop we de webapplicatie kunnen testen en wat voor applicaties hiervoor geschikt zijn.
+Wat zijn de minimum functionaliteiten ervan?
+Hoe groot moet de applicatie zijn?
+In welke browsers moet deze werken?
+Op welke gebruikers richten we ons tijdens dit onderzoek?
+Aan de hand van deze vragen kunnen we een passend project bepalen.
+Deze applicatie moet dan een haalbaar doel zijn in beide vormen, een single page- en multi page applicatie.
 
-% TODO: (fase 4) schrijf de literatuurstudie uit en gebruik waar gepast referenties naar de vakliteratuur.
+\subsection{Single page applicaties}
+De single page applicatie beschrijft al zeer goed de opbouw van de website.
+Deze soort bestaat uit slechts 1 HTML-pagina die zijn eigen structuur aanpast.
+Op deze manier kan de gebruiker navigeren in de applicatie zonder effectief de pagina te herladen of een hele nieuwe te verzoeken.
+Zo is er ook een zeer duidelijk onderscheid in de opbouw van de pagina's.
 
-% Refereren naar de literatuur kan met:
-% \autocite{BIBTEXKEY} -> (Auteur, jaartal)
-% \textcite{BIBTEXKEY} -> Auteur (jaartal)
-Voorbeeld van een referentie waar de auteursnaam geen onderdeel van de zin is~\autocite{Moore2002}.
+Ook voor de ontwikkelaar is dit een duidelijk verschil.
+Het is slechts 1 pagina, die zijn inhoud wijzigd aan de hand van verschillende JavaScript API's \autocite{MDN2022}.
+Een goed voorbeeld kan gegeven worden met ReactJS.
+In React kan een stuk code opgeslagen worden, zoals die van een navigatiebalk, en deze vervolgens op meerdere plaatsen gebruiken.
+Wanneer een aanpassing moet gebeuren eraan, heeft dit als voordeel dat de aanpassing automatisch overal tegelijk gebeurd.
+Dit zonder te kopiëren en te plakken.
 
-\lipsum[4-9]
+Niet te vergeten zijn de overgangen tussen pagina's.
+Ondanks dat er naar een andere link verwezen wordt, wordt niet heel de pagina vernieuwd tijdens het navigeren.
+Concreet wil dit zeggen dat de gebruiker geen leeg scherm te zien krijgt tijdens het inladen van een nieuwe pagina.
+
+\subsection{Multi page applicaties}
+Aan de andere zijde van dit onderzoek houden we ons bezig met de multi page applicaties.
+Deze vorm wordt tegenwoordig ook de traditionele manier van website-ontwikkeling genoemd.
+Dit omdat de structuur in de afgelopen jaren weinig veranderd is.
+
+Opnieuw beschrijft de naam de vorm zelf al.
+De structuur bestaat uit verschillende pagina's.
+Ook het navigeren tussen pagina's heeft weinig vernieuwing gezien en laad nog steeds het volledige HTML-bestand opnieuw.
+Dit zorgt er voor dat de gegevens op een pagina, betekenende de gebruikersinvoer en andere geladen context, volledig vergeten worden tijdens het navigeren.
+
+Toch hebben MPA's als voordeel dat ze zeer goed scoren bij zoekmachines.
+Dit vanwege de volledige pagina die reeds beschikbaar staat en dus niet meer verwerkt moet worden aan de gebruikers' zijde.
+Dit wil op zijn beurt dat deze bij zoekmachines hogerop komt te staan en op die manier beter presteert dan een SPA.
+
 
 \section{Methodologie}
+Voor de wijze van beproeving delen we het onderzoek op in 4 onderdelen: het voorbereiden, het ontwikkelen, het testen op objectieve en subjectieve gegevens en het besluiten.
+Bij ieder deel hebben we ook een geschatte tijd.
 
-% TODO: (fase 5) beschrijf in detail in welke fasen je onderzoek uiteenvalt, hoe lang elke fase duurt en wat het concrete resultaat van elke fase is. Welke onderzoekstechniek ga je toepassen om elk van je onderzoeksvragen te beantwoorden? Gebruik je hiervoor experimenten, vragenlijsten, simulaties? Je beschrijft ook al welke tools je denkt hiervoor te gebruiken of te ontwikkelen.
+\subsection{Voorbereiding}
+Voordat het ontwikkelen van start kan gaan moeten we zeker zijn over de vereisten ervan.
+Uiteraard moeten de functionaliteiten van de webapplicatie in beide vormen gelijk zijn.
+Omdat we zo veel mogelijk invloed willen krijgen van wijzigende data hebben we gekozen voor een blog-website.
+Hiervan vermoeden we dat de performantie het sterkst zal verschillen, omdat het gebruik van afbeeldingen een grote invloed heeft.
+De minimum vereisten van de webapplicatie zijn:
+kunnen inloggen,
+kunnen registreren,
+kunnen navigeren vanuit 1 navigatiebalk,
+Een zoekbalk ter beschikking stellen,
+Een pagina per individueel account kunnen bekijken,
+Een blogpost kunnen maken met maximum 512 karakters
+en afbeeldingen kunnen toevoegen aan een post.
+Het onderscheid tussen beide applicaties bevindt zich voornamelijk in de front-end.
+Hier zal bij de gebruiker ook het grootste verschil duidelijk worden.
+Dit voornamelijk bij de performantie en ervaring ervan.
 
-\lipsum[10-12]
+Ter voorbereiding willen we ook Mock-ups maken van de applicatie.
+Dit om de stijl van de applicatie zo gelijk mogelijk te houden tussen de 2 projecten.
+Dit zou het ontwikkelproces ook moeten versnellen en kunnen logische ontwerpfouten sneller verwijderd worden.
+
+Voor de ontwikkelaar zal het grootste verschil de ontwikkelingsduur zijn.
+Het verdere aanspreken van een API van de blog zou geen verdere verschillen met zich mogen meebrengen.
+Echter hangt dit er grotendeels vanaf welk framework er gekozen wordt voor de SPA.
+Opnieuw, omdat ReactJS het populairste framework is voor SPA's \autocite{Gathoni2022}, kiezen wij ervoor dit te gebruiken in het project.
+
+De geschatte duur van de voorbereiding is 1 week.
+
+\subsection{Ontwikkelen}
+Dit onderdeel van het onderzoek is op zich simpel en eenduidig.
+De mock-ups, gemaakt in de voorbereidingsfase, worden nu omgezet in werkende applicaties.
+Hierbij neemt de ontwikkelaar zijn tijd om stil te staan waar de verschillen voor hem opmerkelijk zijn.
+Enkele aandachtspunten zijn dus:
+de duur,
+de structuur,
+de algemene complexiteit,
+enzovoort.
+
+De geschatte duur van de ontwikkeling is 3 weken.
+
+\subsection{Testen}
+Na het ontwikkelen worden de applicaties met elkaar vergeleken.
+Dit delen we op in 2 categorieën:
+de objectieve gegevens (performantie, SEO, bruikbaarheid...) en de subjectieve gegevens (mening van gebruikers).
+
+\subsubsection{Objectief}
+In dit onderdeel gaan we meetbare voor- en nadelen uit beide applicaties testen.
+Voor de performantie van de SPA webapplicatie gebruiken we React Developer Tools \autocite{RDT2022}.
+Deze tool is hier speciaal voor ontwikkeld en zou een eerste basis moeten voor onze latere conclusie.
+Google's Lighthouse kan gebruikt worden voor beide de SPA en MPA.
+Deze wordt gebruikt voor het testen van prestaties, toegankelijkheid, progressieve webapplicaties, SEO en meer \autocite{GoogleLighthouse2022}.
+Dit geeft een direct beeld van laadtijden andere ontbrekende vereisten.
+Bijvoorbeeld deze voor blinde- en slechtziende mensen.
+Voor het individueel meten van verzoeken naar de server kunnen we gebruikmaken van de Chrome DevTools \autocite{GoogleDevTools2016}.
+Deze omvatten een hele resem aan tools die het ontwikkelen vergemakkelijken.
+In dit onderzoek kan het gebruikt worden om na te gaan welke bestanden en verzoeken ervoor zorgen dat de website trager laad.
+Ook waar de verzoeken langer duren om te verwerken.
+Nadien knnen we hieruit afleiden of het probleem zich bevindt aan de gebruikers' zijde of aan de achterliggende technologie, zoals het soort verbinding of de locatie van de het verzoek.
+Een extra waarde die een rol speelt in performantie-testen is het uur waarop deze uitgevoerd worden.
+Er zullen immers minder gebruikers actief zijn wanneer het 14:00 is, tegenover wanneer het 02:00 is.
+Voor het langdurig testen maken we gebruik van dotcom-monitor \autocite{dotcom-monitor2022}.
+Het is een tool dat zich 24/7 bezig houdt met het testen van uw site's beschikbaarheid en snelheid.
+Deze tool zou ons een een volledig beeld van de performantie moeten geven.
+
+\subsubsection{Subjectief}
+In dit onderdeel is er geen concrete vorm van tools ter beschikking.
+Ook kunnen we hier alleen afgaan op de gebruiker's mening.
+Om toch dit onderdeel te kunnen bevragen voegen we aan het objectieve deel een enquête toe.
+Deze omvat enkele vragen die voor-, tijdens- en na het gebruik ingevuld kunnen worden.
+Om het proces zo vlot mogelijk te laten verlopen geven we de gebruiker een reeks opdrachten die uit te voeren zijn op de applicaties.
+Ook krijgen ze bij iedere opdracht de bijhorende vragen.
+Zo is het mogelijk te werken op eigen tempo en ligt er geen druk op de "proefkonijnen".
+We stellen voornamelijk vragen over de mening over beide applicaties, alsook de persoonlijke gegevens voor zij die dit willen delen met ons onderzoek.
+Enkele voorbeeldvragen zijn:
+"Bij welke vorm ligt uw voorkeur?",
+"Welke verschillen merkte u op?",
+"Had u kennis in dit vakgebied voordat u deelnam aan deze enquête?"\dots
+De persoonlijke vragen zullen uiteraard niet gedeeld worden en dienen louter om de antwoorden te categoriseren in verschillende groepen.
+Enkele voorbeeldcategorieën zijn: de leeftijd en het geslacht.
+
+De geschatte duur van het testen is 4 weken.
+
+\subsection{Besluiten}
+In dit en direct het laatste onderdeel zullen we de gemeten waarden en verzamelde gegevens samenbrengen tot een besluit.
+De bedoeling van dit besluit is niet te concluderen welke van de 2 nooit gebruikt zou mogen worden.
+Het is de bedoeling de keuze makkelijker te maken en daarbij uit te leggen waarom die keuze beter zou zijn.
+
+De geschatte duur van het besluiten is 1 week.
+
 
 \section{Verwachte conclusies}
 
-% TODO: (fase 6) beschrijf wat je verwacht uit je onderzoek en waarom (bv. volgens je literatuuronderzoek is softwarepakket A het meest gebruikte en denk je dat het voor deze casus ook het meest geschikt zal zijn). Natuurlijk kan je niet in de toekomst kijken en mag je geen alternatieve mogelijkheden uitsluiten. In de praktijk gebeurt het ook vaak dat een onderzoek tot verrassende resultaten leidt, dat maakt het proces nog interessanter!
+\subsection{Objectieve verwachtingen}
+Voor de objectieve gegevens zal het voornamelijk neerkomen op performantie en laadtijden van de applicaties.
+Uit ervaring en voorkennis gaan we er vauit dat de performantie hoger zal liggen bij de single page applicatie dan bij de multi page applicatie.
+Dit omdat de volledige HTML-pagina niet meer verzocht moet worden. Enkel de wijzigende delen worden opnieuw opgevraagd aan de server.
+ReactJS, en andere JavaScript-frameworks, zijn gefocussed op de snelheid en performantie van een webapplicatie.
+Echter heeft dit ook een vertekend beeld, omdat de performantie niet het enige onderdeel is aan de prestatie of het aantal bezoekers van een website.
+Zoals eerder besproken hebben zoekmachines de nodige informatie liefst direct en zonder enige verwerking uit te voeren achteraf.
+Ook zal de MPA een groter voordeel hebben bij de eerste keer laden van een pagina.
+Als laatste, en zeer opmerkelijke, aandachtspunt is dat een SPA niet werkt zonder JavaScript en daardoor zijn algemene werking verliest.
 
-\lipsum[14-18]
+\subsection{Subjectieve verwachtingen}
+Voor de subjectieve gegevens zijn er weinig verwachtingen.
+Maar voor de gemiddelde gebruiker zonder achtergrond in het ontwikkelen van websites of applicaties zal de single page applicatie beter overkomen.
+Éen van de redenen is dat de overgangen bij het navigeren soepel verloopt en er geen leeg scherm zichtbaar is tijdens het verversen van de pagina.
+Ook de reeds ingevulde gegevens op de site, zoals een zoekbalk of een bestelformulier, blijven behouden.
+Buiten de verschillen in laadtijden, die een kleinere invloed zullen hebben, zijn er geen zichtbaar aan voor de gebruiker.
 
-%------------------------------------------------------------------------------
-% Referentielijst
-%------------------------------------------------------------------------------
-% TODO: (fase 4) de gerefereerde werken moeten in BibTeX-bestand
-% bibliografie.bib voorkomen. Gebruik JabRef om je bibliografie bij te
-% houden.
+\subsection{Ontwikkelen}
+Uit persoonlijke ervaring kunnen we zeggen dat het makkelijker is te werken met SPA's.
+Het grootste verschil komt neer op de herhalende code.
+Een voorbeeld hiervan is de navigatie die op iedere pagina beschikbaar moet zijn.
+Verder zijn het kleinere verschillen die een rol spelen in de ontwikkelingservaring.
+Het ophalen en tonen van data is in beide gevallen zo goed als hetzelfde omdat ze dezelfde API zouden gebruiken.
+Bij één van de deelvragen ligt de focus op het overzetten van een project.
+Dit van MPA naar SPA en omgekeerd.
+Dit zou van MPA naar SPA makkelijk gaan.
+React verduidelijkt dit door de componenten van react te ondersteunen in normale HTML-bestanden.
+In de andere richting zou dit moeilijker zijn.
+Een project dat als SPA geschreven is heeft geen HTML-bestanden en moet daarom van 0 weer opgebouwd worden.
 
 \phantomsection
 \printbibliography[heading=bibintoc]
+
+\footnotetext[1]{Github-repo: https://github.com/jenspennemanTI109/RM-paper-2122-Penneman}
 
 \end{document}
